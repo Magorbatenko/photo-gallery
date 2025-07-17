@@ -2,71 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mariya Gorbatenko</title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Work Sans', sans-serif;
-      background: #fff;
-      color: #111;
+      background: white;
+      color: #000;
     }
     header {
-      text-align: center;
-      padding: 30px 20px 10px;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-    nav {
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      font-size: 14px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .nav {
+      display: flex;
+      gap: 40px;
       font-weight: 400;
+      text-transform: none;
     }
-    nav a {
+    .nav a {
+      color: black;
       text-decoration: none;
-      color: #111;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 1px;
-      background: #111;
-      transition: width 0.3s;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    #about {
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: 0 auto;
-      font-style: italic;
-      font-size: 16px;
-      line-height: 1.6;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 10px;
-      padding: 20px 40px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px 60px;
     }
-    .gallery-item {
+    .image-container {
       position: relative;
       overflow: hidden;
     }
-    .gallery img {
+    .image-container img {
       width: 100%;
       height: auto;
       display: block;
@@ -74,80 +48,39 @@
     .caption {
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      font-size: 14px;
+      background: rgba(255,255,255,0.9);
+      width: 100%;
       padding: 10px;
+      text-align: center;
+      font-size: 14px;
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-    .gallery-item:hover .caption {
+    .image-container:hover .caption {
       opacity: 1;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Mariya Gorbatenko</div>
-    <nav>
-      <a href="#gallery">Work</a>
-      <a href="#about">About</a>
-      <a href="mailto:your@email.com">Contact</a>
-    </nav>
+    <div>MARIYA GORBATENKO</div>
+    <div class="nav">
+      <a href="index.html">Work</a>
+      <a href="about.html" target="_blank">About</a>
+      <a href="contact.html" target="_blank">Contact</a>
+    </div>
   </header>
-
-  <div class="gallery" id="gallery">
-    <div class="gallery-item">
-      <a href="images/LEV_9206-v585.png" data-lightbox="gallery" data-title="I love nature and gardens">
-        <img src="images/LEV_9206-v585.png" alt="I love nature and gardens" />
-        <div class="caption">I love nature and gardens</div>
-      </a>
+  <main class="gallery">
+    <div class="image-container">
+      <img src="LEV_9206 (2)-v585.png" alt="Nature">
+      <div class="caption">I love nature and gardens</div>
     </div>
-    <div class="gallery-item">
-      <a href="images/2024InAIX.png" data-lightbox="gallery" data-title="Fashion Editorial">
-        <img src="images/2024InAIX.png" alt="Fashion Editorial" />
-        <div class="caption">Fashion Editorial</div>
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="images/IMG_0890-v5.png" data-lightbox="gallery" data-title="Studio Look">
-        <img src="images/IMG_0890-v5.png" alt="Studio Look" />
-        <div class="caption">Studio Look</div>
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="images/LEV_8936.jpg" data-lightbox="gallery" data-title="Natural Light Portrait">
-        <img src="images/LEV_8936.jpg" alt="Natural Light Portrait" />
-        <div class="caption">Natural Light Portrait</div>
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="images/LEV_8869.jpg" data-lightbox="gallery" data-title="Editorial Fashion">
-        <img src="images/LEV_8869.jpg" alt="Editorial Fashion" />
-        <div class="caption">Editorial Fashion</div>
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="images/Pink-Fabric.png" data-lightbox="gallery" data-title="Summer Color">
-        <img src="images/Pink-Fabric.png" alt="Summer Color" />
-        <div class="caption">Summer Color</div>
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="images/LEV_8837.png" data-lightbox="gallery" data-title="Backstage">
-        <img src="images/LEV_8837.png" alt="Backstage" />
-        <div class="caption">Backstage</div>
-      </a>
-    </div>
-  </div>
-
-  <section id="about">
-    Mariya Gorbatenko is a photographer focused on modern portrait and fashion editorials.  
-    She blends natural light with a minimal aesthetic to create timeless imagery.
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+    <div class="image-container"><img src="LEV_8936.jpg" alt=""></div>
+    <div class="image-container"><img src="LEV_8869.jpg" alt=""></div>
+    <div class="image-container"><img src="LEV_8837-ио.png" alt=""></div>
+    <div class="image-container"><img src="IMG_0890-v5.png" alt=""></div>
+    <div class="image-container"><img src="Pink - Summer - fabric.png" alt=""></div>
+    <!-- Add more images here if needed -->
+  </main>
 </body>
 </html>
